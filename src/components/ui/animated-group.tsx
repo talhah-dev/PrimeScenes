@@ -1,7 +1,7 @@
 'use client';
-import { ReactNode } from 'react';
+
+import React, { JSX, ReactNode } from 'react';
 import { motion, Variants } from 'motion/react';
-import React from 'react';
 
 export type PresetType =
   | 'fade'
@@ -15,6 +15,8 @@ export type PresetType =
   | 'rotate'
   | 'swing';
 
+type IntrinsicTag = Extract<keyof JSX.IntrinsicElements, string>;
+
 export type AnimatedGroupProps = {
   children: ReactNode;
   className?: string;
@@ -23,8 +25,8 @@ export type AnimatedGroupProps = {
     item?: Variants;
   };
   preset?: PresetType;
-  as?: React.ElementType;
-  asChild?: React.ElementType;
+  as?: IntrinsicTag;
+  asChild?: IntrinsicTag;
 };
 
 const defaultContainerVariants: Variants = {
@@ -96,8 +98,8 @@ const presetVariants: Record<PresetType, Variants> = {
 };
 
 const addDefaultVariants = (variants: Variants) => ({
-  hidden: { ...defaultItemVariants.hidden, ...variants.hidden },
-  visible: { ...defaultItemVariants.visible, ...variants.visible },
+  hidden: { ...defaultItemVariants.hidden, ...(variants as any).hidden },
+  visible: { ...defaultItemVariants.visible, ...(variants as any).visible },
 });
 
 function AnimatedGroup({
@@ -112,22 +114,17 @@ function AnimatedGroup({
     item: addDefaultVariants(preset ? presetVariants[preset] : {}),
     container: addDefaultVariants(defaultContainerVariants),
   };
+
   const containerVariants = variants?.container || selectedVariants.container;
   const itemVariants = variants?.item || selectedVariants.item;
 
-  const MotionComponent = React.useMemo(
-    () => motion.create(as as keyof JSX.IntrinsicElements),
-    [as]
-  );
-  const MotionChild = React.useMemo(
-    () => motion.create(asChild as keyof JSX.IntrinsicElements),
-    [asChild]
-  );
+  const MotionComponent = React.useMemo(() => motion.create(as), [as]);
+  const MotionChild = React.useMemo(() => motion.create(asChild), [asChild]);
 
   return (
     <MotionComponent
-      initial='hidden'
-      animate='visible'
+      initial="hidden"
+      animate="visible"
       variants={containerVariants}
       className={className}
     >

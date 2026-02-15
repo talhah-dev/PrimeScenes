@@ -19,7 +19,6 @@ export default function HomePage() {
             <Testimonials />
             <RecentWork />
             <Contact />
-            <Footer />
         </Wrapper>
     )
 }

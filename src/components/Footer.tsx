@@ -10,7 +10,7 @@ const footerLinks = [
             { title: 'Home', href: '/' },
             { title: 'Portfolio', href: '/portfolio' },
             { title: 'Services', href: '/services' },
-            { title: 'Testimonials', href: '/testimonials' },
+            { title: 'Industries', href: '/industries' },
         ],
     },
     {
@@ -18,7 +18,6 @@ const footerLinks = [
         items: [
             { title: 'About', href: '/about' },
             { title: 'Contact', href: '/contact' },
-            { title: 'Blog', href: '/blog' },
         ],
     },
     {
@@ -46,7 +45,7 @@ export default function FooterSection() {
                 <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-[#8AF7B7]/10 blur-3xl" />
             </div>
 
-            <div className="mx-auto max-w-6xl px-6 pb-10 pt-16">
+            <div className="mx-auto max-w-7xl px-6 pt-16">
                 <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 shadow-[0_30px_120px_-80px_rgba(0,0,0,.95)] backdrop-blur md:p-10">
                     <div aria-hidden className="absolute inset-0">
                         <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-[#8AF7B7]/14 blur-3xl" />
@@ -146,7 +145,7 @@ export default function FooterSection() {
                                         key={s.label}
                                         href={s.href}
                                         aria-label={s.label}
-                                        className="grid size-10 place-items-center rounded-2xl border border-white/10 bg-white/5 text-[#E9F3E6]/70 transition hover:border-[#8AF7B7]/40 hover:text-[#8AF7B7] hover:bg-white/10"
+                                        className="grid size-10 place-items-center rounded-full border border-white/10 bg-white/5 text-[#E9F3E6]/70 transition hover:border-[#8AF7B7]/40 hover:text-[#8AF7B7] hover:bg-white/10"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -181,12 +180,12 @@ export default function FooterSection() {
                             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                                 <div className="text-sm">
                                     <p className="font-medium text-[#E9F3E6]">Contact</p>
-                                    <p className="text-[#E9F3E6]/65">hello@synthflow.com · Karachi, PK</p>
+                                    <p className="text-[#E9F3E6]/65"><Link href={"mailto:hello@synthflow.com"}>hello@synthflow.com</Link> · Karachi, PK</p>
                                 </div>
                                 <Button
                                     asChild
                                     variant="outline"
-                                    className="h-10 rounded-full border-white/15 bg-transparent text-[#E9F3E6] hover:bg-white/10 hover:text-[#E9F3E6]"
+                                    className="h-10 rounded-full bg-[#D8F782] px-5 font-medium text-[#0A211F] hover:bg-[#CFF06F]"
                                 >
                                     <Link href="/contact">Start a project</Link>
                                 </Button>

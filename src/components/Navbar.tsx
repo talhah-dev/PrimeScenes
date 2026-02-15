@@ -8,10 +8,10 @@ import { cn } from '@/lib/utils'
 
 const menuItems = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Services', href: '/services' },
     { name: 'Industries', href: '/industries' },
-    { name: 'About', href: '/about' },
 ]
 
 export const Navbar = () => {
@@ -77,7 +77,7 @@ export const Navbar = () => {
                                 asChild
                                 variant="ghost"
                                 size="sm"
-                                className="h-10 rounded-full border border-white/10 bg-white/5 px-5 text-[#E9F3E6] hover:bg-white/10"
+                                className="h-10 rounded-full border hover:text-white border-white/10 bg-white/5 px-5 text-[#E9F3E6] hover:bg-white/10"
                             >
                                 <Link href="/portfolio">View work</Link>
                             </Button>
@@ -171,7 +171,7 @@ export const Navbar = () => {
                                     </Button>
                                 </div>
 
-                                <div className="mt-6 text-xs text-[#E9F3E6]/55">
+                                <div className="mt-6 text-xs text-[#E9F3E6]/55 text-center">
                                     Human creativity. <span className="italic text-[#8AF7B7]">AI acceleration.</span>
                                 </div>
                             </div>
