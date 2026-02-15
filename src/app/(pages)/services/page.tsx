@@ -1,6 +1,5 @@
 import Wrapper from '@/app/Wrapper'
 import ServicesFAQSection from '@/components/services/ServicesFAQSection'
-import ServicesFinalCTASection from '@/components/services/ServicesFinalCTASection'
 import ServicesOverviewSection from '@/components/services/ServicesOverviewSection'
 import ServicesProcessSection from '@/components/services/ServicesProcessSection'
 import HeroSection from '@/components/HeroSection'
@@ -18,7 +17,6 @@ export default function ServicePage() {
             />
             <ServicesOverviewSection />
             <ServicesProcessSection />
-            {/* <ServicesFinalCTASection /> */}
             <ServicesFAQSection />
         </Wrapper>
     )

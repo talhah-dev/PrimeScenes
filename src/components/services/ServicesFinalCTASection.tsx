@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { BadgeCheck, ArrowRight, Sparkles } from 'lucide-react'
 
@@ -12,12 +12,12 @@ const points = [
     'Systems for scaling ongoing content',
 ]
 
-const container = {
+const container: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
 }
 
-const item = {
+const item: Variants = {
     hidden: { opacity: 0, y: 14, filter: 'blur(10px)' },
     visible: {
         opacity: 1,
