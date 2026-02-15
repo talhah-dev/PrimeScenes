@@ -1,143 +1,104 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { ArrowRight, Layers, BadgeCheck, Repeat2, Wallet, Sparkles } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+import { BadgeCheck, Layers, Repeat2, Wallet, Sparkles } from 'lucide-react'
 
-const outcomes = [
+const steps = [
   {
-    title: 'Scale Content Production',
-    desc: 'Build a pipeline that produces consistent videos on schedule—without chaos.',
+    title: 'Scale content production',
+    period: 'Outcome 01',
+    description: 'Build a repeatable pipeline that produces consistent videos on schedule—without chaos.',
+    bullets: ['Repeatable templates', 'Faster publishing', 'Less back-and-forth'],
     icon: Layers,
   },
   {
-    title: 'Reduce Traditional Costs',
-    desc: 'Cut production overhead while keeping output polished and business-ready.',
+    title: 'Reduce traditional video costs',
+    period: 'Outcome 02',
+    description: 'Cut production overhead while keeping output polished, professional, and business-ready.',
+    bullets: ['No reshoots', 'Lower overhead', 'Faster iteration'],
     icon: Wallet,
   },
   {
-    title: 'Maintain Brand Consistency',
-    desc: 'Repeatable templates and styling ensure every video feels like your brand.',
+    title: 'Maintain consistent branding',
+    period: 'Outcome 03',
+    description: 'A single style system keeps typography, layouts, and visuals consistent across every deliverable.',
+    bullets: ['Brand rules', 'Reusable scenes', 'Consistent look'],
     icon: BadgeCheck,
   },
   {
-    title: 'Repeatable Messaging',
-    desc: 'Clear structure and systems that make updates fast across teams and markets.',
+    title: 'Deliver clear, repeatable messaging',
+    period: 'Outcome 04',
+    description: 'Structure + pacing make messaging easy to update across teams, markets, and timelines.',
+    bullets: ['Script framework', 'Update-friendly', 'Market-ready'],
     icon: Repeat2,
   },
 ]
 
 export default function AboutApproachSection() {
   return (
-    <section className="bg-[#F7F9F2] py-16 text-[#0A211F] md:py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="relative overflow-hidden rounded-[2rem] border border-black/10 bg-white/70 shadow-[0_24px_80px_-70px_rgba(0,0,0,.45)]">
-          <div aria-hidden className="pointer-events-none absolute inset-0">
-            <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-[#0A211F]/10 blur-3xl" />
-            <div className="absolute -right-24 top-12 h-96 w-96 rounded-full bg-[#8AF7B7]/22 blur-3xl" />
-            <div className="absolute inset-0 [background:radial-gradient(120%_120%_at_50%_0%,rgba(10,33,31,0.08)_0%,rgba(255,255,255,0)_55%)]" />
+    <section className=" py-16 text-[#0A211F] md:py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 12, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          viewport={{ once: true, margin: '-120px' }}
+          transition={{ type: 'spring', bounce: 0.25, duration: 0.9 }}
+          className="mx-auto max-w-3xl text-center"
+        >
+          <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-4 py-1.5 text-xs font-semibold text-[#0A211F]/70">
+            <Sparkles className="size-4" />
+            Our Approach
           </div>
 
-          <div className="relative grid gap-10 p-7 md:p-10 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-5">
-              <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-1.5 text-xs font-semibold text-[#0A211F]/70">
-                <Sparkles className="size-4 text-[#0A211F]" />
-                Our Approach
-              </div>
+          <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight md:text-4xl">
+            We treat AI video like a system — not a one-off project.
+          </h2>
 
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-                We treat AI video like a system—
-                <span className="block text-[#0A211F]/70">not a one-off project.</span>
-              </h2>
+          <p className="mt-4 text-pretty text-base text-[#0A211F]/70 md:text-lg">
+            That means helping businesses scale content production, reduce costs, maintain consistent branding, and
+            deliver repeatable messaging.
+          </p>
+        </motion.div>
 
-              <p className="mt-4 text-pretty text-base text-[#0A211F]/70 md:text-lg">
-                Whether it’s one video or an entire content pipeline, we build with long-term efficiency in mind—so your
-                team can publish faster, stay consistent, and scale without complexity.
-              </p>
+        <div className="relative mx-auto mt-10 max-w-5xl md:mt-14">
+          <div className="absolute inset-y-0 left-4 border-l-2 border-black/10 md:left-5" />
 
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Button
-                  asChild
-                  className="h-11 rounded-full bg-[#0A211F] px-6 text-[#8AF7B7] hover:bg-[#0A211F]/90"
-                >
-                  <Link href="/contact#contact-form">
-                    Discuss Your Project <ArrowRight className="ml-2 size-4" />
-                  </Link>
-                </Button>
-
-                <Button
-                  asChild
-                  variant="outline"
-                  className="h-11 rounded-full border-black/10 bg-white px-6 text-[#0A211F] hover:bg-black/5"
-                >
-                  <Link href="/services">Explore Services</Link>
-                </Button>
-              </div>
-
-              <div className="mt-8 rounded-2xl border border-black/10 bg-white/80 p-5">
-                <div className="text-xs font-semibold uppercase tracking-wide text-[#0A211F]/55">
-                  Built for long-term teams
-                </div>
-                <div className="mt-2 text-sm leading-relaxed text-[#0A211F]/70">
-                  You get templates, workflows, and structure that make updates easy—so content doesn’t break when things
-                  change.
-                </div>
-              </div>
-            </div>
-
+          {steps.map(({ title, description, period, bullets, icon: Icon }, index) => (
             <motion.div
-              initial="hidden"
-              whileInView="show"
+              key={title}
+              initial={{ opacity: 0, y: 14, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               viewport={{ once: true, margin: '-120px' }}
-              variants={{
-                hidden: {},
-                show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
-              }}
-              className="grid gap-5 lg:col-span-7 sm:grid-cols-2"
+              transition={{ type: 'spring', bounce: 0.25, duration: 0.9, delay: index * 0.03 }}
+              className="relative pb-10 pl-12 last:pb-0 md:pl-14"
             >
-              {outcomes.map((o) => {
-                const Icon = o.icon
-                return (
-                  <motion.div
-                    key={o.title}
-                    variants={{
-                      hidden: { opacity: 0, y: 14, filter: 'blur(10px)' },
-                      show: {
-                        opacity: 1,
-                        y: 0,
-                        filter: 'blur(0px)',
-                        transition: { type: 'spring', bounce: 0.25, duration: 0.9 },
-                      },
-                    }}
-                    className="h-full"
-                  >
-                    <Card className="group h-full rounded-3xl border-black/10 bg-white shadow-[0_18px_60px_-55px_rgba(0,0,0,.35)] transition hover:-translate-y-0.5 hover:border-[#0A211F]/25">
-                      <CardContent className="p-6">
-                        <div className="flex items-start gap-4">
-                          <div className="grid size-12 shrink-0 place-items-center rounded-2xl border border-black/10 bg-[#0A211F] text-[#8AF7B7]">
-                            <Icon className="size-5" />
-                          </div>
+              <div className="absolute left-4 top-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-background md:left-5">
+                <Icon className="size-5 text-[#0A211F]" />
+              </div>
 
-                          <div className="min-w-0">
-                            <h3 className="text-lg font-semibold">{o.title}</h3>
-                            <p className="mt-1 text-sm leading-relaxed text-[#0A211F]/70">{o.desc}</p>
-                          </div>
-                        </div>
+              <div className="rounded-3xl border border-black/10 bg-transparent p-6 shadow-[0_18px_60px_-55px_rgba(0,0,0,.25)]">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-[#0A211F]/55">{period}</div>
+                  <Badge variant="secondary" className="rounded-full">
+                    System outcome
+                  </Badge>
+                </div>
 
-                        <div className="mt-6 flex items-center justify-between">
-                          <div className="h-px w-16 bg-black/10 transition group-hover:w-24" />
-                          <div className="text-xs font-semibold text-[#0A211F]/55">System-first</div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                )
-              })}
+                <h3 className="mt-3 text-xl font-semibold tracking-[-0.01em]">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#0A211F]/70 sm:text-base">{description}</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {bullets.map((b) => (
+                    <Badge key={b} variant="secondary" className="rounded-full">
+                      {b}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
             </motion.div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

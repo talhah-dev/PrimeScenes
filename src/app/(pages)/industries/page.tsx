@@ -3,21 +3,22 @@ import HeroSection from '@/components/HeroSection'
 import IndustriesShowcase from '@/components/industries/IndustriesShowcase'
 import IndustryValueStrip from '@/components/industries/IndustryValueStrip'
 import React from 'react'
-import IndustryCtaBanner from './IndustryCtaBanner'
+import IndustrySteps from '@/components/industries/IndustrySteps'
 
 export default function IndustryPage() {
     return (
         <Wrapper>
             <HeroSection
                 badge="Industries"
-                heading="AI video systems built for real teams."
-                description="We create AI-powered videos tailored to your industry—so you can train faster, educate clients clearly, and scale communication with consistent, professional content."
+                heading="Ready to create AI videos for your industry?"
+                description="Whether it’s training, client education, or marketing, we help businesses like yours scale
+                communication with AI-powered videos fast, easy, and professional."
                 primaryButton={{ label: 'Book a Free Strategy Call', href: '/contact#book' }}
                 secondaryButton={{ label: 'Send Your Project Details', href: '/contact#contact-form' }}
             />
             <IndustriesShowcase />
             <IndustryValueStrip />
-            <IndustryCtaBanner />
+            <IndustrySteps />
         </Wrapper>
     )
 }

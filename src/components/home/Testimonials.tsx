@@ -79,24 +79,15 @@ function Stars({ count }: { count: number }) {
 
 export default function Testimonials() {
     return (
-        <section className="bg-[#F7F9F2] px-6 py-16 text-[#0A211F] md:py-24">
-            <div className="mx-auto max-w-5xl">
+        <section className="bg-[#F7F9F2] px-6 py-16 text-[#0A211F] md:py-20">
+            <div className="mx-auto max-w-7xl">
                 <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-balance text-4xl font-semibold tracking-[-0.03em] lg:text-5xl">
+                    <h2 className="text-balance text-4xl leading-tight font-semibold tracking-[-0.03em] lg:text-5xl">
                         Trusted by teams shipping video at scale
                     </h2>
                     <p className="mt-4 text-base text-[#0A211F]/75 md:text-lg">
                         Real feedback from founders, marketers, and operators using SynthFlow for ads, onboarding, and training.
                     </p>
-
-                    <div className="mt-8 flex justify-center">
-                        <Button
-                            asChild
-                            className="h-11 rounded-full bg-[#0A211F] px-6 text-[#8AF7B7] hover:bg-[#0A211F]/90"
-                        >
-                            <Link href="/testimonials">View all testimonials</Link>
-                        </Button>
-                    </div>
                 </div>
 
                 <div className="mx-auto mt-10 w-full max-w-(--breakpoint-xl) sm:mt-14">

@@ -35,19 +35,19 @@ const items = [
 
 export default function FeaturesSection() {
     return (
-        <section className="bg-[#F7F9F2] py-12 text-[#0A211F] md:py-20">
-            <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-14">
-                <div className="relative z-10 mx-auto max-w-2xl space-y-6 text-center md:space-y-10">
-                    <h2 className="text-balance text-4xl font-medium lg:text-5xl">
+        <section className="bg-[#F7F9F2] pb-12 text-[#0A211F] md:pb-20">
+            <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-14">
+                {/* <div className="relative z-10 mx-auto max-w-2xl space-y-6 text-center md:space-y-10">
+                    <h2 className="text-balance md:text-4xl text-3xl leading-tight font-medium ">
                         The foundation for premium AI video.
                     </h2>
                     <p className="text-base leading-relaxed text-[#0A211F]/75">
                         SynthFlow combines human storytelling with a repeatable AI production system—so your content stays
                         consistent, fast, and scalable across campaigns and teams.
                     </p>
-                </div>
+                </div> */}
 
-                <div className="relative mx-auto grid max-w-4xl divide-x divide-y divide-black/10 border border-black/10 bg-white/60 backdrop-blur-sm *:p-10 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="relative mx-auto grid max-w-7xl divide-x divide-y divide-black/10 border border-black/10 bg-white/60 backdrop-blur-sm *:p-10 sm:grid-cols-2 lg:grid-cols-3">
                     {items.map((it) => {
                         const Icon = it.icon
                         return (

@@ -12,10 +12,10 @@ import { Marquee } from "@/components/ui/marquee";
 
 const LogoCloud = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center px-6">
+    <div className="flex md:py-24 py-14 items-center justify-center px-6">
       <div className="overflow-hidden">
         <p className="text-center font-medium text-xl">
-          More than 2.2 million companies worldwide already trust us
+          More than 50+ companies worldwide already trust us
         </p>
 
         <div className="mt-14 max-w-(--breakpoint-xl) space-y-8">

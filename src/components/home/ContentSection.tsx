@@ -2,18 +2,18 @@ import Image from 'next/image'
 
 export default function ContentSection() {
     return (
-        <section className="bg-[#F7F9F2] py-16 text-[#0A211F] md:py-32">
-            <div className="mx-auto max-w-5xl space-y-10 px-6 md:space-y-16">
-                <h2 className="relative z-10 max-w-2xl text-balance text-4xl font-medium lg:text-5xl">
+        <section className="bg-[#F7F9F2] py-16 text-[#0A211F] md:py-24">
+            <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-10">
+                <h2 className="relative z-10 max-w-2xl text-balance md:text-4xl text-3xl font-medium leading-tight">
                     A repeatable AI video system, built for clarity and scale.
                 </h2>
 
-                <div className="grid items-center gap-8 sm:grid-cols-2 md:gap-12 lg:gap-20">
+                <div className="grid items-center gap-4 sm:grid-cols-2 lg:gap-10">
                     <div className="relative">
-                        <div className="rounded-2xl border border-black/10 bg-white p-2 shadow-[0_20px_70px_-55px_rgba(0,0,0,.35)]">
+                        <div className="rounded-2xl">
                             <div className="overflow-hidden rounded-xl">
                                 <Image
-                                    src="/process.png"
+                                    src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     className="w-full"
                                     alt="AI video workflow preview"
                                     width={1207}
@@ -35,7 +35,7 @@ export default function ContentSection() {
                         </p>
 
                         <div className="pt-6">
-                            <blockquote className="rounded-2xl border border-black/10 bg-white p-6 shadow-[0_20px_70px_-55px_rgba(0,0,0,.25)]">
+                            <blockquote className="rounded-xl border border-black/10 bg-white p-6 shadow-[0_20px_70px_-55px_rgba(0,0,0,.25)]">
                                 <p className="text-[#0A211F]">
                                     “SynthFlow turned our training content into a consistent, scalable video system. The pacing,
                                     visual structure, and localization were on point—and turnaround was fast.”

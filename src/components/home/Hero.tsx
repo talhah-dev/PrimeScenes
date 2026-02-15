@@ -143,20 +143,20 @@ export default function HeroSection() {
                 </div>
 
                 <section>
-                    <div className="relative pt-24 md:pt-36">
+                    <div className="relative pt-32 md:pt-36">
                         <div className="mx-auto max-w-7xl px-6">
-                            <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
+                            <div className="text-center  sm:mx-auto lg:mr-auto lg:mt-0">
                                 <AnimatedGroup variants={transitionVariants}>
                                     <Link
                                         href="/portfolio"
-                                        className="mx-auto flex w-fit items-center gap-4 rounded-full border border-white/10 bg-white/5 p-1 pl-4 shadow-md shadow-black/20 backdrop-blur transition-colors duration-300 hover:bg-white/8"
+                                        className="mx-auto flex w-fit items-center gap-4 rounded-full border border-white/10 bg-white/5 p-1 pl-4 shadow-md shadow-black/20 backdrop-blur py-1 md:py-0 transition-colors duration-300 hover:bg-white/8"
                                     >
                                         <span className="text-sm text-[#E9F3E6]/90">
-                                            Human creativity. <span className="italic text-[#8AF7B7]">AI acceleration.</span> Watch our showreel
+                                            Human creativity. <span className="italic text-[#8AF7B7]">AI acceleration.</span > <span className='md:inline hidden'>Watch our showreel</span>
                                         </span>
                                         <span className="block h-4 w-0.5 bg-white/20" />
-                                        <div className="size-7 overflow-hidden rounded-full bg-[#D8F782]">
-                                            <div className="flex w-14 -translate-x-1/2 duration-500 ease-in-out hover:translate-x-0">
+                                        <div className="size-7 shrink-0 overflow-hidden rounded-full bg-[#D8F782]">
+                                            <div className="flex w-14  -translate-x-1/2 duration-500 ease-in-out hover:translate-x-0">
                                                 <span className="flex size-7">
                                                     <ArrowRight className="m-auto size-3 text-[#0A211F]" />
                                                 </span>
@@ -172,9 +172,9 @@ export default function HeroSection() {
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
-                                    className="mx-auto mt-10 max-w-5xl text-balance tracking-tight font-semibold text-5xl leading-tight text-[#8AF7B7] md:text-7xl xl:text-[5rem]"
+                                    className="mx-auto mt-10 max-w-5xl text-balance tracking-tight font-semibold text-4xl leading-tight text-[#8AF7B7] md:text-7xl xl:text-[5rem]"
                                 >
-                                    AI creative video, made for brands.
+                                    AI-Powered Video Production for Modern Businesses
                                 </TextEffect>
 
                                 <TextEffect
@@ -185,8 +185,8 @@ export default function HeroSection() {
                                     as="p"
                                     className="mx-auto mt-8 max-w-3xl text-balance text-lg text-[#E9F3E6]/80"
                                 >
-                                    Ads, explainers, onboarding, and training—crafted with a repeatable system for pacing, clarity, and brand
-                                    consistency. Faster delivery, premium output, and multilingual scale.
+                                    We create professional AI avatar videos for training, marketing, and client communication —
+                                    designed to scale with your business.
                                 </TextEffect>
 
                                 <AnimatedGroup
@@ -225,12 +225,12 @@ export default function HeroSection() {
                                         },
                                         ...transitionVariants,
                                     }}
-                                    className="mt-10 flex flex-col items-center justify-center gap-3 md:flex-row"
+                                    className="mt-10 flex w-full flex-col items-center justify-center gap-3 md:flex-row"
                                 >
                                     <Button
                                         asChild
                                         size="lg"
-                                        className="h-12 rounded-full bg-[#D8F782] px-7 text-base font-medium text-[#0A211F] hover:bg-[#CFF06F]"
+                                        className="h-12 md:w-auto w-full rounded-full bg-[#D8F782] px-7 text-base font-medium text-[#0A211F] hover:bg-[#CFF06F]"
                                     >
                                         <Link href="/contact">Get a quote</Link>
                                     </Button>
@@ -239,7 +239,7 @@ export default function HeroSection() {
                                         asChild
                                         size="lg"
                                         variant="ghost"
-                                        className="h-12 rounded-full border border-white/15 bg-white/5 px-7 text-base text-[#E9F3E6] hover:bg-white/10"
+                                        className="h-12 md:w-auto w-full rounded-full hover:text-white border border-white/15 bg-white/5 px-7 text-base text-[#E9F3E6] hover:bg-white/10"
                                     >
                                         <Link href="/portfolio">View portfolio</Link>
                                     </Button>

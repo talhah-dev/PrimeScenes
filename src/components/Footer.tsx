@@ -39,11 +39,6 @@ const socials = [
 export default function FooterSection() {
     return (
         <footer className="relative overflow-hidden bg-[#0A211F] text-[#E9F3E6]">
-            <div aria-hidden className="pointer-events-none absolute inset-0">
-                <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#8AF7B7]/18 blur-3xl" />
-                <div className="absolute -right-24 top-28 h-80 w-80 rounded-full bg-white/8 blur-3xl" />
-                <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-[#8AF7B7]/10 blur-3xl" />
-            </div>
 
             <div className="mx-auto max-w-7xl px-6 pt-16">
                 <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 shadow-[0_30px_120px_-80px_rgba(0,0,0,.95)] backdrop-blur md:p-10">
@@ -58,7 +53,7 @@ export default function FooterSection() {
                                 <span className="h-1.5 w-1.5 rounded-full bg-[#8AF7B7]" />
                                 Premium AI video production
                             </div>
-                            <h3 className="text-balance text-2xl font-semibold tracking-tight md:text-3xl">
+                            <h3 className="text-balance text-2xl leading-tight font-semibold tracking-tight md:text-3xl">
                                 Ready to ship your next video—fast, consistent, and on-brand?
                             </h3>
                             <p className="max-w-2xl text-sm leading-relaxed text-[#E9F3E6]/70 md:text-base">
@@ -69,7 +64,7 @@ export default function FooterSection() {
                             <div className="flex flex-wrap gap-3 pt-3">
                                 <Button
                                     asChild
-                                    className="h-11 rounded-full bg-[#8AF7B7] px-6 text-[#0A211F] hover:bg-[#8AF7B7]/90"
+                                    className="h-10 rounded-full bg-[#D8F782] !px-5 font-medium text-[#0A211F] hover:bg-[#CFF06F]"
                                 >
                                     <Link href="/contact">
                                         Get a quote <ArrowRight className="ml-2 size-4" />
@@ -102,7 +97,7 @@ export default function FooterSection() {
                                     />
                                     <Button
                                         type="submit"
-                                        className="h-11 rounded-full bg-[#0A211F] px-5 text-[#8AF7B7] ring-1 ring-white/10 hover:bg-[#0A211F]/85"
+                                        className="h-11 rounded-full bg-[#0A211F] px-5 text-white ring-1 ring-white/10 hover:bg-[#0A211F]/85"
                                     >
                                         Subscribe
                                     </Button>

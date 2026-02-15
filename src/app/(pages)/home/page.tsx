@@ -16,8 +16,8 @@ export default function HomePage() {
             <LogoCloud />
             <ContentSection />
             <FeaturesSection />
-            <Testimonials />
             <RecentWork />
+            <Testimonials />
             <Contact />
         </Wrapper>
     )

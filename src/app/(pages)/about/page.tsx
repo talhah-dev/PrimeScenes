@@ -18,8 +18,8 @@ export default function AboutPage() {
             />
             <AboutHighlightsSection />
             <AboutWhyClientsWorkWithUs />
-            <AboutApproachSection />
             <AboutVisionSection />
+            <AboutApproachSection />
         </Wrapper>
     )
 }
