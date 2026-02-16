@@ -14,6 +14,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
+import { ViewProject } from './ViewProject'
 
 type Category = 'All' | 'Explainers' | 'Ads' | 'Training' | 'Onboarding' | 'Multilingual' | 'Social'
 
@@ -228,12 +229,11 @@ export default function PortfolioGallerySection() {
                                 </p>
 
                                 <div className="mt-3">
-                                    <Link
-                                        href={it.href}
+                                    <div
                                         className="flex items-center gap-2 text-sm font-medium text-[#0A211F] transition-all duration-500 hover:gap-3"
                                     >
-                                        View project <ArrowRight className="size-4" />
-                                    </Link>
+                                        <ViewProject />
+                                    </div>
                                 </div>
                             </div>
                         ))}

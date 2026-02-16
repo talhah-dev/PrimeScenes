@@ -50,22 +50,22 @@ const portfolio = [
   {
     title: 'Product Explainer',
     description: 'Clean scenes + clear story that makes the product instantly understandable.',
-    image: '/portfolio/thumb-1.jpg',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Performance Ad',
     description: 'Hook-first pacing designed for retention, clicks, and conversions.',
-    image: '/portfolio/thumb-2.jpg',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Training Module',
     description: 'Structured onboarding that reduces support load and speeds up learning.',
-    image: '/portfolio/thumb-3.jpg',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Multilingual Version',
     description: 'Localized delivery with consistent branding across markets.',
-    image: '/portfolio/thumb-4.jpg',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
 ]
 
@@ -155,11 +155,11 @@ export default function ServicesAndPortfolio() {
             </Link>
           </div>
 
-          <div className="mt-8 grid gap-6 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-5 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
             {portfolio.map((p) => (
               <div className="flex w-full flex-col text-start" key={p.title}>
-                <div className="mb-5 overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-[0_25px_90px_-55px_rgba(0,0,0,.95)] backdrop-blur sm:mb-6">
-                  <div className="relative aspect-[4/5] w-full">
+                <div className="mb-5 overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-[0_25px_90px_-55px_rgba(0,0,0,.95)] backdrop-blur sm:mb-6">
+                  <div className="relative h-60 w-full">
                     <Image
                       src={p.image}
                       alt={p.title}

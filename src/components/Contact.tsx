@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
+import ContactForm from './contact/Contact'
 
 export default function Contact() {
     return (
@@ -89,70 +90,7 @@ export default function Contact() {
                             </CardHeader>
 
                             <CardContent className="mt-2">
-                                <form className="space-y-6">
-                                    <div className="grid gap-6">
-                                        <div>
-                                            <Label htmlFor="name">
-                                                Name <span className="text-red-500">*</span>
-                                            </Label>
-                                            <Input
-                                                id="name"
-                                                required
-                                                className="mt-2 h-10 bg-white shadow-none"
-                                                placeholder="Your name"
-                                                autoComplete="name"
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <Label htmlFor="email">
-                                                Email <span className="text-red-500">*</span>
-                                            </Label>
-                                            <Input
-                                                id="email"
-                                                required
-                                                type="email"
-                                                className="mt-2 h-10 bg-white shadow-none"
-                                                placeholder="you@company.com"
-                                                autoComplete="email"
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <Label htmlFor="phone">Phone / WhatsApp</Label>
-                                            <Input
-                                                id="phone"
-                                                type="tel"
-                                                className="mt-2 h-10 bg-white shadow-none"
-                                                placeholder="+92..."
-                                                autoComplete="tel"
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <Label htmlFor="message">
-                                                Message <span className="text-red-500">*</span>
-                                            </Label>
-                                            <Textarea
-                                                id="message"
-                                                required
-                                                className="mt-2 bg-white shadow-none"
-                                                placeholder="Tell us what you need or what issue you’re facing."
-                                                rows={6}
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <Button
-                                        type="submit"
-                                        size="lg"
-                                        className="w-full rounded-full bg-[#0A211F] text-[#8AF7B7] hover:bg-[#0A211F]/90"
-                                    >
-                                        Send message
-                                    </Button>
-
-                                    <p className="text-center text-xs text-[#0A211F]/55">We typically reply within 24 hours on business days.</p>
-                                </form>
+                               <ContactForm/>
                             </CardContent>
                         </Card>
                     </div>
